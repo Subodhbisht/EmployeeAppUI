@@ -1,0 +1,50 @@
+<div class="p-fluid">
+    <div class="p-formgroup-inline srchArea">
+        <div class="p-field emp-search-field" >
+            <label for="name" class="p-sr-only">Start searching for employee by first or last name</label>
+            <input id="name" type="text" pInputText placeholder="Start searching for a employee by first or last name" [(ngModel)]="searchCriteria.name"> 
+        </div>
+        <div class="p-field emp-search-field">
+            <label for="startDate" class="p-sr-only">Start Date</label>
+            <p-calendar [(ngModel)]="searchCriteria.startDate" [showIcon]="true" inputId="startDate" placeholder="Employment start date"></p-calendar>
+        </div>
+        <div class="p-field emp-search-field">
+            <label for="endDate" class="p-sr-only">Start Date</label>
+            <p-calendar [(ngModel)]="searchCriteria.endDate" [showIcon]="true" inputId="endDate" placeholder="Employment end date"></p-calendar>
+        </div>
+        <!-- <button pButton type="button" label="Submit" (click)="searchEmployee()"></button> -->
+        <button type="button" class="btn btn-success" (click)="searchEmployee()">Secondary</button>
+    </div>
+  <div>
+
+    <div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Job Title</th>
+            <th>Age</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let employee of employees; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{employee.empCode}}</td>
+            <td>{{employee.firstName}} {{employee.lastName}}</td>
+            <td>{{employee.jobTitle}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.startDate}}</td>
+            <td>{{employee.endDate}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="alert alert-warning" role="alert" *ngIf="employees?.length==0">
+        No record(s) found!
+    </div>
+</div>
+  </div>
+</div>

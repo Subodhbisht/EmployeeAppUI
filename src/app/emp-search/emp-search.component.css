@@ -1,0 +1,35 @@
+.srchArea {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+}
+
+.emp-search-field {
+    margin-bottom: 15px;
+}
+
+.p-calendar .p-datepicker {
+    min-width: 0%;
+}
+
+.search-grid {
+    padding: 1.5rem;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-style: solid;
+    margin-top: 1%;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    margin-top: 1%;
+    border-width: 1px;
+}
